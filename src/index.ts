@@ -8,6 +8,7 @@ class ProductList implements IProductList {
     createProduct(data: TProduct): IProduct {
         let product = {...data, id: this.id, createdAt: new Date(), updatedAt: new Date()}
         this.productList.push(product)
+        this.id++
         return product
     }
 
